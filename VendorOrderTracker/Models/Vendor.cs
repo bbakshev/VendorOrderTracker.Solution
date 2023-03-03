@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace VendorOrderTracker.Models
 {
-  public class Vendor 
+  public class Vendor
   {
-    private static List<Vendor> _instances = new List<Vendor> {};
+    private static List<Vendor> _instances = new List<Vendor> { };
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; }
@@ -23,7 +23,7 @@ namespace VendorOrderTracker.Models
     {
       _instances.Clear();
     }
-    
+
     public static List<Vendor> GetAll()
     {
       return _instances;
@@ -31,7 +31,11 @@ namespace VendorOrderTracker.Models
 
     public static Vendor Find(int searchId)
     {
-      return _instances[searchId-1];
+      return _instances[searchId - 1];
+    }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
   }
 }
