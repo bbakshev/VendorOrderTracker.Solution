@@ -24,5 +24,15 @@ namespace VendorOrderTracker.Tests
       string result = newVendor.Name;
       Assert.AreEqual(vendorName, result);
     }
+
+    [TestMethod]
+    public void GetVendorDescriotion_ReturnsVendorDescription_String()
+    {
+      string vendorDesc = "Needs a dozen cookies";
+      string vendorName = "Suzie's Cafe";
+      Vendor newVendor = new Vendor(vendorName, vendorDesc);
+      string result = newVendor.Description;
+      Assert.AreEqual(vendorDesc, result);
+    }
   }
 }
