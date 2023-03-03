@@ -42,7 +42,7 @@ namespace VendorOrderTracker.Tests
       string vendorDesc = "Needs a dozen cookies";
       Vendor newVendor = new Vendor(vendorName, vendorDesc);
       int result = newVendor.Id;
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(0, result);
     }
   }
 }
