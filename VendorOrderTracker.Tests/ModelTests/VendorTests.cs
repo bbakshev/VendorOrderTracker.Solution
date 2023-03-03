@@ -84,7 +84,7 @@ namespace VendorOrderTracker.Tests
     {
       string orderTitle = "Bread";
       string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
-      int price = 5;
+      string price = "5";
 
       Order newOrder = new Order(orderTitle, orderDescription, price);
       List<Order> newList = new List<Order> {newOrder};

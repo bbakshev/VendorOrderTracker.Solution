@@ -16,7 +16,7 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order ("Bread", "is done with flour", 5);
+      Order newOrder = new Order ("Bread", "is done with flour", "5");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace VendorOrderTracker.Tests
     {
       string orderTitle = "Bread";
       string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
-      int price = 5;
+      string price = "5";
 
       Order newOrder = new Order(orderTitle, orderDescription, price);
 
@@ -39,11 +39,11 @@ namespace VendorOrderTracker.Tests
     {
       string orderTitle = "Bread";
       string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
-      int price = 5;
+      string price = "5";
 
       string newOrderTitle = "Cinnamon Rolls";
       string newOrderDescription = "a sweet roll commonly served in Northern Europ";
-      int newPrice = 7;
+      string newPrice = "7";
 
       Order newOrder = new Order(orderTitle, orderDescription, price);
 
@@ -69,7 +69,7 @@ namespace VendorOrderTracker.Tests
     {
       string orderTitle = "Bread";
       string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
-      int price = 5;
+      string price = "5";
 
       Order newOrder = new Order(orderTitle, orderDescription, price);
 
@@ -83,11 +83,11 @@ namespace VendorOrderTracker.Tests
     {
       string orderTitle = "Bread";
       string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
-      int price = 5;
+      string price = "5";
 
       string newOrderTitle = "Cinnamon Rolls";
       string newOrderDescription = "a sweet roll commonly served in Northern Europ";
-      int newPrice = 7;
+      string newPrice = "7";
 
       Order newOrder = new Order(orderTitle, orderDescription, price);
       Order newOrder1 = new Order(newOrderTitle, newOrderDescription, newPrice);
@@ -102,7 +102,7 @@ namespace VendorOrderTracker.Tests
     {
       string orderTitle = "Bread";
       string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
-      int price = 5;
+      string price = "5";
 
       Order newOrder = new Order(orderTitle, orderDescription, price);
 
