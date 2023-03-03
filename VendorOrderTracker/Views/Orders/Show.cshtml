@@ -4,11 +4,11 @@
 
 <h1>Order List Details:</h1>
 
-<h2>@Model["order"].Title</h2>
-<h2>@Model["order"].Description</h2>
-<h2>@Model["order"].Price</h2>
-<h2>@Model["order"].CurrentDate</h2>
-<h3>Vendor: @Model["vendor"].Name</h3>
+<p><strong>Order Title:</strong> @Model["order"].Title</p>
+<p><strong>Order Description:</strong> @Model["order"].Description</p>
+<p><strong>Order Price: </strong> $@Model["order"].Price</p>
+<p><strong>Order Date Stamp: </strong>@Model["order"].CurrentDate</p>
+<p><strong>Vendor: </strong> @Model["vendor"].Name</p>
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
 <a href='/vendors'>View all vendors</a>
