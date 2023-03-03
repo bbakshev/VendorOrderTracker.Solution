@@ -64,5 +64,18 @@ namespace VendorOrderTracker.Tests
 
       CollectionAssert.AreEqual(newOrder, result);
     }
+
+    public void GetID_ReturnsID_Int()
+    {
+      string orderTitle = "Bread";
+      string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
+      int price = 5;
+
+      Order newOrder = new Order(orderTitle, orderDescription, price);
+
+      int result = newOrder.Id;
+
+      Assert.AreEqual(1, result);
+    }
   }
 }
