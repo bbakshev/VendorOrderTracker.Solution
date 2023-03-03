@@ -29,5 +29,27 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(orderDescription, newOrder.Description);
       Assert.AreEqual(price, newOrder.Price);
     }
+
+    [TestMethod]
+    public void SetTitleDescriptionAndPrice()
+    {
+      string orderTitle = "Bread";
+      string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
+      int price = 5;
+
+      string newOrderTitle = "Cinnamon Rolls";
+      string newOrderDescription = "a sweet roll commonly served in Northern Europ";
+      int newPrice = 7;
+
+      Order newOrder = new Order(orderTitle, orderDescription, price);
+
+      newOrder.Title = newOrderTitle;
+      newOrder.Description = newOrderDescription;
+      newOrder.Price = newPrice;
+
+      Assert.AreEqual(newOrderTitle, newOrder.Title);
+      Assert.AreEqual(newOrderDescription, newOrder.Description);
+      Assert.AreEqual(newPrice, newOrder.Price);
+    }
   }
 }
