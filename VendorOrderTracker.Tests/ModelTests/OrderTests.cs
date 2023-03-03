@@ -77,5 +77,24 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string orderTitle = "Bread";
+      string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
+      int price = 5;
+
+      string newOrderTitle = "Cinnamon Rolls";
+      string newOrderDescription = "a sweet roll commonly served in Northern Europ";
+      int newPrice = 7;
+
+      Order newOrder = new Order(orderTitle, orderDescription, price);
+      Order newOrder1 = new Order(newOrderTitle, newOrderDescription, newPrice);
+
+      Order result = Order.Find(2);
+
+      Assert.AreEqual(newOrder1, result);
+    }
   }
 }
