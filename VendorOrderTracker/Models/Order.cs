@@ -10,6 +10,9 @@ namespace VendorOrderTracker.Models
     public string Description { get; set; }
     public int Price { get;  set; }
     public int Id { get; }
+
+    public DateTime CurrentDate { get; set; }
+
     public Order(string orderTitle, string orderDescription, int price)
     {
       Title = orderTitle;
@@ -17,6 +20,7 @@ namespace VendorOrderTracker.Models
       Price = price;
       _instances.Add(this);
       Id = _instances.Count;
+      CurrentDate = DateTime.Now;
     }
 
     public static void ClearAll()
