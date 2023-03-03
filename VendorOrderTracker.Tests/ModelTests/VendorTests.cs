@@ -3,6 +3,8 @@ using VendorOrderTracker.Models;
 using System.Collections.Generic;
 using System;
 
+namespace VendorOrderTracker.Tests
+{
 [TestClass]
   public class VendorTests
   {
@@ -14,3 +16,4 @@ using System;
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
+}
