@@ -6,8 +6,13 @@ using System;
 namespace VendorOrderTracker.Tests
 {
 [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+    
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -42,7 +47,7 @@ namespace VendorOrderTracker.Tests
       string vendorDesc = "Needs a dozen cookies";
       Vendor newVendor = new Vendor(vendorName, vendorDesc);
       int result = newVendor.Id;
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(1, result);
     }
 
     [TestMethod]
