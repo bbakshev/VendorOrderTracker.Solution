@@ -78,5 +78,26 @@ namespace VendorOrderTracker.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string orderTitle = "Bread";
+      string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
+      int price = 5;
+
+      Order newOrder = new Order(orderTitle, orderDescription, price);
+      List<Order> newList = new List<Order> {newOrder};
+
+      string vendorName = "Suzie's Cafe";
+      string vendorDesc = "Best Cafe in lower Manhattan";
+
+      Vendor newVendor = new Vendor(vendorName, vendorDesc);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
