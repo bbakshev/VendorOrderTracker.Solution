@@ -96,5 +96,19 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(newOrder1, result);
     }
+
+    [TestMethod]
+    public void SetDate_SetDateOnInstanceOfOrder()
+    {
+      string orderTitle = "Bread";
+      string orderDescription = "A food consisting of flour or meal that is moistened, kneaded into dough, and often fermented using yeast";
+      int price = 5;
+
+      Order newOrder = new Order(orderTitle, orderDescription, price);
+
+      DateTime currentDate = DateTime.Now;
+
+      Assert.AreEqual(currentDate.ToString(), newOrder.CurrentDate.ToString());
+    }
   }
 }
