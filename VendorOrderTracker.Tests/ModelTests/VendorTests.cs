@@ -26,13 +26,23 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetVendorDescriotion_ReturnsVendorDescription_String()
+    public void GetVendorDescription_ReturnsVendorDescription_String()
     {
-      string vendorDesc = "Needs a dozen cookies";
       string vendorName = "Suzie's Cafe";
+      string vendorDesc = "Needs a dozen cookies";
       Vendor newVendor = new Vendor(vendorName, vendorDesc);
       string result = newVendor.Description;
       Assert.AreEqual(vendorDesc, result);
+    }
+
+    [TestMethod]
+    public void GetID_ReturnsID_Int()
+    {
+      string vendorName = "Suzie's Cafe";
+      string vendorDesc = "Needs a dozen cookies";
+      Vendor newVendor = new Vendor(vendorName, vendorDesc);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
     }
   }
 }
