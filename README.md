@@ -11,7 +11,7 @@
 
 ## Description
 
-_This application will prompt the user to create a tracker for the vendors they're partnered with to sell new orders. The application will allow the user to add a new vendor by clicking the "Add a new Vendor" link, then it will take the user to a form where the user can input the details for the vendor as well as order details_
+_This application will prompt the user to create a tracker for the vendors they're partnered with to sell new orders. The application will allow the user to add a new vendor by clicking the "Add a new Vendor" link, then it will take the user to a form where the user can input the details for the vendor as well as order details._
 
 ## Setup/Installation Requirements
 
